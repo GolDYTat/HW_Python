@@ -6,4 +6,4 @@ for i in range(num):
     i += 1
     factorial *= i
     a.append(factorial)
-print(a)
+print(f'Произведение чисел от 1 до',num, '=>', a)
