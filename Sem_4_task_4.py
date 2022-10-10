@@ -2,8 +2,8 @@ import random
 
 k = int(input("Введите степень: "))
 
-def write_file(ect):
-    with open('file_Sem_4_task_4.txt', 'w') as data:
+def write_file(name, ect):
+    with open(name, 'w') as data:
         data.write(ect)
 
 def rnd():
@@ -34,4 +34,4 @@ def ecuation(indx):
                 wst += ' = 0'
     return wst
 
-write_file(ecuation(index(k)))
+write_file('file_Sem_4_task_4.txt', ecuation(index(k)))

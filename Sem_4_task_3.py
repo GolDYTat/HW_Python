@@ -6,8 +6,8 @@ for i in a:
         b.append(i)
 print(f"Список из неповторяющихся элементов: {b}")
 
-for i in b:
-    for i in a:
+for i in range(len(b)):
+    for i in range(len(a)):
         if i in a == i in b:
             continue
         else:
