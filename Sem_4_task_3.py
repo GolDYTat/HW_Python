@@ -1,15 +1,19 @@
-a = list(input("Введите числа через пробел:\n").split())
+from random import randint
 
-b = []
-for i in a:
-    if i not in b:
-        b.append(i)
-print(f"Список из неповторяющихся элементов: {b}")
+dict = {}
 
-for i in range(len(b)):
-    for i in range(len(a)):
-        if i in a == i in b:
-            continue
-        else:
-            b.remove(i)
-print(f"Список из неповторяющихся элементов: {b}")
+nums = ''.join(list(map(str, [randint(0, 9) for x in range(10)])))
+print(nums)
+
+for i in nums:
+    if dict.get(i):
+        dict[i] = dict.get(i) + 1
+    else:
+        dict[i] = 1
+
+result = []
+for i in dict:
+    if dict[i] == 1:
+        result.append(i)
+
+print(result)
